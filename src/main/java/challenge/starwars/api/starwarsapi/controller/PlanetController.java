@@ -41,7 +41,6 @@ public class PlanetController {
 	
 	
 	// GET ALL
-	
 	@RequestMapping(value = "/planet/", method = RequestMethod.GET)
 	public ResponseEntity<List<Planet>> listAllPlanets() {
 		List<Planet> planets = planetRepository.findAll();
