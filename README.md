@@ -1,9 +1,6 @@
 StarWars API
 =================
 
-### TEMPLATE EM CONSTRUÇÃO
----------------
-
 **`API REST`** desenvolvida para guardar informações de planetas do universo **StarWars** onde pude utilizar alguns princípios de metodologias ágeis e desenvolver novas skills técnicas e de gestão de projetos.
 
 Cartacterísticas
@@ -43,8 +40,7 @@ O formato de envio de dados é o JSON, e deve ser seguir o template de exemplo a
   "terrain" : "value"
 }
 ```
-Caso o envio aconteça sem algum desses campos, o servidor retornarar o Status Code 400 (bad request). 
-Exemplo do envio e do erro:
+Caso o envio aconteça sem algum desses campos, o servidor irá retornar erro. Exemplo do envio e do status de erro:
 
 ##### JSON
 ```javascript
@@ -53,19 +49,13 @@ Exemplo do envio e do erro:
   "terrain" : "value"
 }
 ```
-##### Resposta
+##### Response
 ```HTTP
 Status: 400 (Bad Request)
 ```
 
-### POST
-
-
-
-### PUT
-
-
-### DELETE
+### TEMPLATE EM CONSTRUÇÃO...
+---------------
 
 
 Tecnologias utilizadas
