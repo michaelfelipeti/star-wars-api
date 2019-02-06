@@ -202,10 +202,6 @@ Status: 404 (Not Found)
 }
 ```
 
-### TEMPLATE EM CONSTRUÇÃO...
----------------
-
-
 Tecnologias utilizadas
 ---------------
 
@@ -216,3 +212,5 @@ Tecnologias utilizadas
   - SpringBoot Data Rest
   - SpringBoot Data MongoDB
 - MongoDB
+
+> MAY THE FORCE BE WITH YOU!
