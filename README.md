@@ -73,18 +73,18 @@ Requisição a todos os planetas, JSON de retorno e status de resposta:
 ###### JSON
 ```javascript
 [
-{
-  "_id" : "value",
-  "name" : "value",
-  "climate" : "value",
-  "terrain" : "value"
-}
-{
-  "_id" : "value",
-  "name" : "value",
-  "climate" : "value",
-  "terrain" : "value"
-}
+ {
+   "_id" : "value",
+   "name" : "value",
+   "climate" : "value",
+   "terrain" : "value"
+ }
+ {
+   "_id" : "value",
+   "name" : "value",
+   "climate" : "value",
+   "terrain" : "value"
+ }
 ]
 ```
 ###### RESPONSE
@@ -121,6 +121,55 @@ Caso o envio aconteça sem algum desses campos, o servidor irá retornar erro. E
 Status: 400 (Bad Request)
 ```
 
+PUT
+---------------
+
+Verbo ``HTTP`` que possibilita fazer a requisição que irá atualizar os dados no banco de dados da aplicação. A utlização do verbo ``PUT`` só é possível para atualização de registros específicos, sendo necessário mencionar o id na ``URL`` e seguir o exemplo do ``JSON`` do template abaixo:
+
+###### JSON
+```javascript
+{
+  "name" : "Plutão",
+  "climate" : "frio",
+  "terrain" : "irregular"
+}
+```
+Esse exemplo resultará na seguinte resposta:
+
+###### JSON
+```javascript
+{
+  "name" : "Plutão",
+  "climate" : "frio",
+  "terrain" : "irregular"
+}
+```
+
+##### Response
+```HTTP
+Status: 200 (Ok)
+```
+
+Caso o envio aconteça sem algum desses campos, o servidor irá atualizar apenas o campos modificados.
+
+Caso o JSON de envio conter os mesmos dados já salvos no banco de dados, o servidor retornará o seguinte status:
+
+##### Response
+```HTTP
+Status: 304 (Not Modified)
+```
+
+#### Exemplos de possíveis erros:
+
+Requisição sem informação do id:
+
+###### URL
+``http://localhost:8080/api/planet/``
+
+##### Response
+```HTTP
+Status: 405 (Method Not Allowed)
+```
 
 DELETE
 ---------------
@@ -141,7 +190,7 @@ Existem duas possibilidades:
 ``http://localhost:8080/api/planet/``
 
 #### Exemplos de possíveis erros:
-Deletar planeta por id inválido:
+Requisição com informação de id inválido:
 
 ##### Response
 ```HTTP
