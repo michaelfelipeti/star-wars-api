@@ -30,7 +30,7 @@ Começando
 ---------------
 Após iniciar a aplicação e o banco de dados, a API pode ser acessada através da URL ``http://localhost:8080/api/planet``.
 
-### GET
+### POST
 
 O formato de envio de dados é o JSON, e deve ser seguir o template de exemplo abaixo:
 ```javascript
